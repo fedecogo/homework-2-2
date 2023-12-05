@@ -12,6 +12,7 @@ public class Main2 {
 
         List<Integer> listaInvertita = new ArrayList<>(listaCasuale);
         creaListaInvertita(listaInvertita);
+
     }
 
     public static void generaListaCasuale(List<Integer> listaCasuale, int numInserito) {
@@ -21,6 +22,7 @@ public class Main2 {
             listaCasuale.add(random.nextInt(101));
         }
         System.out.println("Lista casuale non ordinata: " + listaCasuale);
+        posizioniPari(listaCasuale);
         Collections.sort(listaCasuale);
         System.out.println("Lista casuale ordinata: " + listaCasuale);
 
@@ -30,7 +32,18 @@ public class Main2 {
         Collections.reverse(listaInvertita);
         listaInvertita.addAll(new ArrayList<>(listaInvertita));
         System.out.println("Lista con elementi invertiti: " + listaInvertita);
+
     }
+
+    public static void posizioniPari (List<Integer> listaInvertita) {
+        System.out.println("Ecco i numeri nelle posizioni pari:");
+        for (int i = 0; i < listaInvertita.size(); i++) {
+            if (i % 2 == 0) {
+                System.out.println(listaInvertita.get(i));
+            }
+        }
+    }
+
 
 
 
